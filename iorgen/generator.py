@@ -11,6 +11,7 @@ from typing import Callable, Iterator, List, Optional
 
 from iorgen.types import Input
 from iorgen.markdown import gen_markdown
+from iorgen.parser_ada import gen_ada
 from iorgen.parser_c import gen_c
 from iorgen.parser_cpp import gen_cpp
 from iorgen.parser_csharp import gen_csharp
@@ -77,6 +78,7 @@ class Language:
 
 
 ALL_LANGUAGES = [
+    Language("adb", gen_ada, ["gnatmake", "-f", "-q"], no_stderr=True),
     Language(
         "c", gen_c,
         ["gcc", "-std=c11", "-Wall", "-Wextra", "-O2", "-lm", "-o", "{name}"]),

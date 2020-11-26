@@ -7,9 +7,9 @@ IO Reader GENerator
 template. The user writes a YAML describing the input, and *Iorgen* will
 generate the code to read this input from stdin, in all supported languages.
 
-The list of currently supported languages is: C, C++, C#, D, Go, Haskell, Java,
-Javascript, Lua, Ocaml, Pascal, Perl, PHP, Prolog, Python, Ruby, Rust, Scheme.
-A markdown description of the input in English and French can also be
+The list of currently supported languages is: Ada, C, C++, C#, D, Go, Haskell,
+Java, Javascript, Lua, Ocaml, Pascal, Perl, PHP, Prolog, Python, Ruby, Rust,
+Scheme. A markdown description of the input in English and French can also be
 generated.
 
 ## Installation
@@ -34,15 +34,15 @@ for instance, you will have to install lots of compilers.
 
 The complete dependencies for Archlinux are:
 ```shell
-pacman -S --needed python-yaml fpc gambit-c gcc gdc ghc go jdk8-openjdk lua \
-    mono nodejs ocaml perl php ruby rust swi-prolog
+pacman -S --needed python-yaml fpc gambit-c gcc gcc-ada gdc ghc go jdk8-openjdk
+    lua53 mono nodejs ocaml perl php ruby rust swi-prolog
 ```
 
 For Debian 9 (and probably Ubuntu), they are:
 ```shell
 sudo apt install python3-yaml mono-mcs gdc golang ghc openjdk-8-jdk-headless \
     nodejs-legacy lua5.3 ocaml-nox fp-compiler php-cli swi-prolog-nox ruby \
-    rustc gambc
+    rustc gambc gnat
 ```
 
 ## Usage
